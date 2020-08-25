@@ -23,9 +23,20 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
+.main-component {
+  margin: auto;
+  display: inline;
+}
 .App-link {
   color: #61dafb;
+}
+.card-header {
+  display: inline-block;
+  width: calc(100% - 8px);
+  max-width: 500px;
+  margin: 4px;
+  height: 2em;
+  background-color: red;
 }
 
 @keyframes App-logo-spin {
