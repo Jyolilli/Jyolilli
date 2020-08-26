@@ -1,0 +1,34 @@
+[
+  {
+    "postOwner": "Claas",
+    "postContent": {
+      "type": "text",
+      "text": "just writing a placeholder post"
+    },
+    "comments": [
+      {
+        "commenter": "Luke",
+        "comment": {
+          "type": "text",
+          "text": "Great post"
+        }
+      }
+    ]
+  },
+  {
+    "postOwner": "Alice",
+    "postContent": {
+      "type": "text",
+      "text": "second post"
+    },
+    "comments": [
+      {
+        "commenter": "Claas",
+        "comment": {
+          "type": "text",
+          "text": "codebar magic"
+        }
+      }
+    ]
+  }
+]
