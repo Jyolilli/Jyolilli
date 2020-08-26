@@ -4,37 +4,11 @@ import '../App.css';
 function Main() {
   return (
     <div className="main-component">
-      <div className="card-header"></div>
-      <div className="card-header"></div>
-      <div className="card-header"></div>
-      <div className="card-header"></div>
-      <div className="card-header"></div>
-      <div className="card-header"></div>
-      <div className="card-header"></div>
-      <div className="card-header"></div>
-      <div className="card-header"></div>
-      <div className="card-header"></div>
-      <div className="card-header"></div>
-      <div className="card-header"></div>
-      <div className="card-header"></div>
-      <div className="card-header"></div>
-      <div className="card-header"></div>
-      <div className="card-header"></div>
-      <div className="card-header"></div>
-      <div className="card-header"></div>
-      <div className="card-header"></div>
-      <div className="card-header"></div>
-      <div className="card-header"></div>
-      <div className="card-header"></div>
-      <div className="card-header"></div>
-      <div className="card-header"></div>
-      <div className="card-header"></div>
-      <div className="card-header"></div>
-      <div className="card-header"></div>
-      <div className="card-header"></div>
-      <div className="card-header"></div>
-      <div className="card-header"></div>
-      <div className="card-header"></div>
+      <div className="card">
+      <div className="card-profile-pic"></div>
+      <div className="card-emoji-icon"></div>
+      </div>
+      
     </div>
   );
 }
