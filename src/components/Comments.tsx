@@ -15,7 +15,7 @@ function Comments(props: CommentsProps) {
   return (
     <>
       {comments.map(({ commenter, comment }) => (
-        <p>
+        <p key={comment.text}>
           <span>{commenter}: </span>
           {comment.text}
         </p>

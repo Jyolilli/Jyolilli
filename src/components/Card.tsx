@@ -10,6 +10,11 @@ type CardProps = CommentsProps & {
 };
 
 function Card(props: CardProps) {
+const handlePost = (e: React.FormEvent<HTMLInputElement>) => {
+    const newValue = e.currentTarget.value;
+    console.log(newValue)
+}
+
   const { postOwner, postContent, comments } = props;
   return (
     <article className="card">
@@ -30,7 +35,7 @@ function Card(props: CardProps) {
           <Comments comments={comments} />
 
           <form action="">
-            <input type="text" name="quickpost" />
+            <input type="text" name="quickpost" onChange={handlePost} />
             <input type="submit" value="Post" />
           </form>
         </div>

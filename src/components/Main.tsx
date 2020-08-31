@@ -8,7 +8,7 @@ function Main() {
     <main className="main-component">
       <section>
         {posts.map((post) => (
-          <Card {...post} />
+          <Card key={post.postOwner} {...post} />
         ))}
       </section>
     </main>
