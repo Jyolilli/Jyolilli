@@ -1,5 +1,5 @@
-import React from 'react';
-import Comments, { CommentsProps } from './Comments';
+import React from "react";
+import Comments, { CommentsProps } from "./Comments";
 
 type CardProps = CommentsProps & {
   postOwner: string;
@@ -10,36 +10,43 @@ type CardProps = CommentsProps & {
 };
 
 function Card(props: CardProps) {
-const handlePost = (e: React.FormEvent<HTMLInputElement>) => {
+  const handlePost = (e: React.FormEvent<HTMLInputElement>) => {
     const newValue = e.currentTarget.value;
-    console.log(newValue)
-}
+    console.log(newValue);
+  };
+
+  //  BEM vs ITCSS
 
   const { postOwner, postContent, comments } = props;
   return (
     <article className="card">
-      <header>
-        <div className="profile-pic"></div>
-        <div className="emoji"></div>
-        <h2>{postOwner}</h2>
-      </header>
-      <div>
-        <p>{postContent.text}</p>
+      <div className="square-pic">
+        <img src="https://www.creasedcards.com/img/product/traflagar-square-art-based-london-landmark-card-3010907-600.jpg" />
       </div>
-      <footer>
+      <div className="square-pic">
         <header>
-          <button>LikeBtn</button>
-          <button>ChatBtn</button>
+          <div className="profile-pic"></div>
+          <div className="emoji"></div>
+          <h2>{postOwner}</h2>
         </header>
         <div>
-          <Comments comments={comments} />
-
-          <form action="">
-            <input type="text" name="quickpost" onChange={handlePost} />
-            <input type="submit" value="Post" />
-          </form>
+          <p>{postContent.text}</p>
         </div>
-      </footer>
+        <footer>
+          <header>
+            <button>LikeBtn</button>
+            <button>ChatBtn</button>
+          </header>
+          <div>
+            <Comments comments={comments} />
+
+            <form action="">
+              <input type="text" name="quickpost" onChange={handlePost} />
+              <input type="submit" value="Post" />
+            </form>
+          </div>
+        </footer>
+      </div>
     </article>
   );
 }
