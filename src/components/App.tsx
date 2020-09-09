@@ -1,8 +1,8 @@
-import React from 'react';
-import Card from './Card';
-import '../App.css';
-import posts from '../data.json';
-import Layout from './Layout'
+import React from "react";
+import Card from "./Card";
+import "../App.scss";
+import posts from "../data.json";
+import Layout from "./Layout";
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
         {/* {posts.map((post) => (
           <Card key={post.postOwner} {...post} />
         ))} */}
-        <Layout/>
+        <Layout />
       </section>
     </main>
   );
