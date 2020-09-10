@@ -21,7 +21,7 @@ function Card(props: CardProps) {
   return (
     <article className="card">
       <div className="square-pic">
-        <img src="https://www.creasedcards.com/img/product/traflagar-square-art-based-london-landmark-card-3010907-600.jpg" />
+        <img src="{postContent.text}" />
       </div>
       <div className="square-pic">
         <header>
