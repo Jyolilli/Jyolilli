@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
 export type CommentsProps = {
   comments: {
     commenter: string;
     comment: {
       type: string;
-      text: string;
+      value: string;
     };
   }[];
 };
@@ -15,9 +15,9 @@ function Comments(props: CommentsProps) {
   return (
     <>
       {comments.map(({ commenter, comment }) => (
-        <p key={comment.text}>
+        <p key={comment.value}>
           <span>{commenter}: </span>
-          {comment.text}
+          {comment.value}
         </p>
       ))}
     </>

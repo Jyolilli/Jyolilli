@@ -1,42 +1,42 @@
 [{
     "postOwner": "Claas",
     "postContent": {
-      "type": "text",
-      "text": "https://www.creasedcards.com/img/product/traflagar-square-art-based-london-landmark-card-3010907-600.jpg"
+      "type": "image",
+      "value": "https://www.creasedcards.com/img/product/traflagar-square-art-based-london-landmark-card-3010907-600.jpg"
     },
     "comments": [{
       "commenter": "Luke",
       "comment": {
         "type": "text",
-        "text": "Great post"
+        "value": "Great post"
       }
     }]
   },
   {
     "postOwner": "Alice",
     "postContent": {
-      "type": "text",
-      "text": "https://www.creasedcards.com/img/product/traflagar-square-art-based-london-landmark-card-3010907-600.jpg"
+      "type": "image",
+      "value": "https://www.creasedcards.com/img/product/traflagar-square-art-based-london-landmark-card-3010907-600.jpg"
     },
     "comments": [{
       "commenter": "Claas",
       "comment": {
         "type": "text",
-        "text": "codebar magic"
+        "value": "codebar magic"
       }
     }]
   },
   {
     "postOwner": "Jessica",
     "postContent": {
-      "type": "img",
-      "text": "https://www.creasedcards.com/img/product/traflagar-square-art-based-london-landmark-card-3010907-600.jpg"
+      "type": "text",
+      "value": "Awesome codebar"
     },
     "comments": [{
       "commenter": "Pillow",
       "comment": {
         "type": "text",
-        "text": "Yeah, isn't it cool!"
+        "value": "Yeah, isn't it cool!"
       }
     }]
   }

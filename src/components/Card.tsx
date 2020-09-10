@@ -5,7 +5,7 @@ type CardProps = CommentsProps & {
   postOwner: string;
   postContent: {
     type: string;
-    text: string;
+    value: string;
   };
 };
 
@@ -20,18 +20,22 @@ function Card(props: CardProps) {
   const { postOwner, postContent, comments } = props;
   return (
     <article className="card">
-      <div className="square-pic">
-        <img src="{postContent.text}" />
-      </div>
+      {postContent.type === "image" ? (
+        <div className="square-pic">
+          <img src={postContent.value} alt={postContent.type} />
+        </div>
+      ) : null}
       <div className="square-pic">
         <header>
           <div className="profile-pic"></div>
           <div className="emoji"></div>
           <h2>{postOwner}</h2>
         </header>
-        <div>
-          <p>{postContent.text}</p>
-        </div>
+        {postContent.type === "text" ? (
+          <div>
+            <p>{postContent.value}</p>
+          </div>
+        ) : null}
         <footer>
           <header>
             <button>LikeBtn</button>
