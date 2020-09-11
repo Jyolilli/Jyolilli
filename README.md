@@ -1,17 +1,19 @@
 # Planning
 
-[TOC]
+![ScreenShot](https://github.com/BOZ2323/Jyolilli/blob/master/public/app_layout.png)
 
 ## design
+
 - simple, pure
 - can add more later
 - thin, black lines
 - square, cohesive pictures
 - short text posts, quotes/tweets, not long posts
 - accessibility
-- responsive
+- responsive"codebar magic"
 
 ## features
+
 - profile page
 - make friends, have list of friends, unfriend
 - log in and out, create an account
@@ -22,18 +24,19 @@
 - add short videos
 
 ## pages
+
 - friends page
 - profile
 - main feed page
 
-
 ## tech
+
 - styled-components
 - create-react-app
 - nextjs?
 - redux
 - react (with Hooks)
-- postgreSQL/mongodb 
+- postgreSQL/mongodb
 - typescript
 - express
 - node
@@ -47,9 +50,10 @@
 - prettier
 - flow? https://flow.org/
 - aws
-- 
+-
 
 ## stages of development
+
 1. Log in and see a page that says you're logged in
 2. Sign up/create an account
 3. Landing page
@@ -59,30 +63,30 @@
 7. -
 8. Chat
 
-
 ## tasks
+
 0. User journey
 1. Mock up the design
 2. Create repo
 3. Set up Trello
 4. Decide file structure
-5. 
+5.
 6. Deploy early
-
 
 ## process guide
 
 **Overview:**
 This issue is intended to document for our current processes within this project. Once everyone agrees on the document, contents should only be changed once discussed with and agreed by the whole team.
 
-**Linting:** 
+**Linting:**
 We use eslint with the airbnb settings to ensure consistent, good-quality code.
 
 **Branches:**
-We work off a staging branch. This branch is only merged to master once we've got a complete product, ready to be deployed on Heroku. 
+We work off a staging branch. This branch is only merged to master once we've got a complete product, ready to be deployed on Heroku.
 Each new branch should start with one of the following:
+
 - feature/
-- fix/ 
+- fix/
 
 depending on its function. It should also have hyphens (-) to separate words.
 
@@ -90,7 +94,7 @@ depending on its function. It should also have hyphens (-) to separate words.
 Written in present tense (imperative) to describe what a commit does, rather than what it did.
 E.g. Change color of search bar instead of Changed/changes color of search bar
 
-**Naming things:** 
+**Naming things:**
 Functions - camelCase, describe what it does
 Classes - Block Element Modifier (BEM), [useful video for recapping BEM rules](https://www.youtube.com/watch?v=lpxXHkZSl1Q)
 Tests - [filename].test.js
@@ -106,18 +110,20 @@ Relate the issue number either in the commit message or pull request message.
 
 **Merging pull requests:**
 Check through the code carefully, comment on anything questionable by hovering over the line and clicking the blue plus that appears.
+
 - If changes need to be made, add the changes-needed label.
 - If everything is a-okay, merge the pull request and delete the branch.
 
 **Accessibility:**
-Avoid divs in favour of semantic elements (eg section, header, button) wherever possible. 
+Avoid divs in favour of semantic elements (eg section, header, button) wherever possible.
 All form elements should have labels.
 Follow guidelines from [Oli's talk](https://fac-a11y.netlify.com/#0).
-Use [Aria roles](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques) as a last resort. 
+Use [Aria roles](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques) as a last resort.
 
 ---
 
 ### Before submitting a pull request:
+
 - [ ] git pull staging and merge with branch locally to prevent conflicts
 - [ ] relate relevant issue
 - [ ] check the project runs
@@ -135,15 +141,17 @@ Use [Aria roles](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA
 - [ ] no console logs except for crucial system messages (e.g. which port server is on).
   - console.error is used in error handling.
 
-
 ## example user journeys
 
 ### Main flow
-**On page load:** #3 
+
+**On page load:** #3
+
 - logo
 - link to find toilet page
 
 **Location page:**
+
 - use my location button to use user's geolocation
 - location input
   - postcode
@@ -151,13 +159,15 @@ Use [Aria roles](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA
   - any other forms of location?
 - submit button to retrieve all toilets nearby from database
 
-**Filters page:** #6 
+**Filters page:** #6
+
 - five options to filter toilets
 - back button
 - submit button
 - cookies to store filter preferences
 
-**List view page:** #8 
+**List view page:** #8
+
 - each toilet has:
   - icon
   - name
@@ -168,25 +178,23 @@ Use [Aria roles](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA
 ---
 
 ### User journey
+
 **Main user journey:**
 As a user, I want to find my closest suitable toilet ASAP when I'm out and about in London.
 
 **User stories:**
-As a user, I want to see the main page of the app on load. 
-As a user, I want to choose how I input my location. 
+As a user, I want to see the main page of the app on load.
+As a user, I want to choose how I input my location.
 As a user, I want to select toilets that fit my needs.
-As a user, I don't want to select my filters every time. 
-As a user, I want to be able to easily navigate between pages.   
-As a user, I want to get a list of toilets. 
-As a user, I want directions to a particular toilet.  
+As a user, I don't want to select my filters every time.
+As a user, I want to be able to easily navigate between pages.  
+As a user, I want to get a list of toilets.
+As a user, I want directions to a particular toilet.
 
 **Sprint 2 stories/Stretch goals:**
 As a user, I want to be able to add a new toilet to the app.  
 As a user, I want to be able to edit incorrect toilet info.  
-As a user, I want to see the nearby toilets in a map. 
-
-
-
+As a user, I want to see the nearby toilets in a map.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

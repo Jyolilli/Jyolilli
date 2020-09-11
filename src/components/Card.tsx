@@ -6,7 +6,7 @@ type CardProps = CommentsProps & {
   postContent: {
     type: string;
     value: string;
-  };
+  }[];
 };
 
 function Card(props: CardProps) {
@@ -20,22 +20,36 @@ function Card(props: CardProps) {
   const { postOwner, postContent, comments } = props;
   return (
     <article className="card">
-      {postContent.type === "image" ? (
+      {postContent
+        .filter(({ type }) => type === "image")
+        .map((pic) => (
+          <div className="square-pic">
+            <img src={pic.value} alt={pic.type} />
+          </div>
+        ))}
+      {/* {postContent.type === "image" ? (
         <div className="square-pic">
           <img src={postContent.value} alt={postContent.type} />
         </div>
-      ) : null}
+      ) : null} */}
       <div className="square-pic">
         <header>
           <div className="profile-pic"></div>
           <div className="emoji"></div>
           <h2>{postOwner}</h2>
         </header>
-        {postContent.type === "text" ? (
+        {postContent
+          .filter(({ type }) => type === "text")
+          .map((txt) => (
+            <div>
+              <p>{txt.value}</p>
+            </div>
+          ))}
+        {/* {postContent.type === "text" ? (
           <div>
             <p>{postContent.value}</p>
           </div>
-        ) : null}
+        ) : null} */}
         <footer>
           <header>
             <button>LikeBtn</button>
