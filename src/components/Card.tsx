@@ -9,14 +9,30 @@ type CardProps = CommentsProps & {
     value: string;
   }[];
 };
+//TODO
+/*
+userComments - array of objects
+fontawesome nested into input
+
+
+*/
 
 function Card(props: CardProps) {
   const [userComments, setUserComments] = useState("");
+  const [newComment, setNewComment] = useState("");
 
-  const handlePost = (e: React.FormEvent<HTMLInputElement>) => {
-   console.log(e.currentTarget.value);
-    setUserComments(e.currentTarget.value);
-    console.log(userComments);
+  const handleCommentChange = (e: React.FormEvent<HTMLInputElement>) => {
+    setNewComment(e.currentTarget.value);
+    
+    console.log({ newComment });
+  };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    console.log("hi");
+    e.preventDefault();
+    setUserComments(newComment);
+
+    console.log({ userComments });
   };
 
   //  BEM vs ITCSS
@@ -54,10 +70,10 @@ function Card(props: CardProps) {
             <Comments comments={comments} />
             {userComments}
 
-            <form action="">
-              <input className="submit-comment" type="text" name="quickpost" onChange={handlePost} />
-             {/* <input type="submit" value="Post" /> */}
-              <FontAwesomeIcon className="arrow-right" icon="arrow-alt-circle-right" />
+            <form onSubmit={handleSubmit}>
+              <input className="submit-comment" value={ newComment } type="text" name="quickpost" onChange={handleCommentChange} />
+              <input type="submit" value="Post" />
+              {/* <FontAwesomeIcon className="arrow-right" icon="arrow-alt-circle-right" /> */}
             </form>
           </div>
         </footer>
