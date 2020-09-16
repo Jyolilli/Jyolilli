@@ -40,7 +40,6 @@
 
   img {
     width: 100%;
-
   }
 
   &:nth-child(even) {
@@ -114,22 +113,33 @@
   // flex-wrap: wrap;
 }
 
-.square-pix{
+.square-pix {
   object-fit: cover;
 }
 
-.brick {
+.square {
   width: 50%;
+  padding: 5px;
 }
 
-.text{
+.text {
   font-size: 9px;
 }
+.name {
+  color: rgb(9, 87, 160);
+}
+.heart {
+  color: red;
+}
+.submit-comment {
+  outline: 0;
+  border-width: 0 0 1px;
+}
 
-.button-field{
+.button-field {
   display: flex;
-	width: 330px;
-	justify-content: space-around;
+  width: 330px;
+  justify-content: space-around;
 }
 
 @keyframes App-logo-spin {

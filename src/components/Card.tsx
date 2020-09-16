@@ -27,11 +27,11 @@ function Card(props: CardProps) {
       {postContent
         .filter(({ type }) => type === "image")
         .map((pic) => (
-          <div className="brick">
+          <div>
             <img className="square-pix" src={pic.value} alt={pic.type} />
           </div>
         ))}
-      <div className="brick">
+      <div className="square">
         <header>
           <div className="profile-pic"></div>
           <div className="emoji"></div>
@@ -46,17 +46,18 @@ function Card(props: CardProps) {
           ))}
         <footer>
           <header>
-            <FontAwesomeIcon icon="heart" />
-            <button className="like-button">Like</button>
-            <button className="chat-button">Chat</button>
+            <FontAwesomeIcon className="heart" icon="heart" />
+            {/* <button className="like-button">Like</button>
+            <button className="chat-button">Chat</button> */}
           </header>
           <div>
             <Comments comments={comments} />
             {userComments}
 
             <form action="">
-              <input type="text" name="quickpost" onChange={handlePost} />
-              <input type="submit" value="Post" />
+              <input className="submit-comment" type="text" name="quickpost" onChange={handlePost} />
+             {/* <input type="submit" value="Post" /> */}
+              <FontAwesomeIcon className="arrow-right" icon="arrow-alt-circle-right" />
             </form>
           </div>
         </footer>
