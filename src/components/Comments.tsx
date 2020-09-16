@@ -16,8 +16,8 @@ function Comments(props: CommentsProps) {
     <>
       {comments.map(({ commenter, comment }) => (
         <p key={comment.value}>
-          <span>{commenter}: </span>
-          {comment.value}
+          <h6 className="name">{commenter}: </h6>
+          <span className="text">{comment.value}</span>
         </p>
       ))}
     </>

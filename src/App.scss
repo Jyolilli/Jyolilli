@@ -25,21 +25,17 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
 .main-component {
   margin: auto;
   display: inline;
 }
+
 .App-link {
   color: #61dafb;
 }
+
 .card {
-  // max-width: 30em;
-  // width: calc(100% - 8px);
-  // background-color: #86abc529;
-  // padding: 1.5em;
-  // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  // transition: 0.3s;
-  // margin: 1.5em 0;
   display: flex;
 
   img {
@@ -49,13 +45,16 @@
 
   &:nth-child(even) {
     flex-direction: row-reverse;
+
     img {
-      width: 50%;
+      width: 100%;
     }
   }
 }
+
 .button {
-  background-color: #4caf50; /* Green */
+  background-color: #4caf50;
+  /* Green */
   border: none;
   color: white;
   padding: 30px;
@@ -66,8 +65,10 @@
   margin: 4px 2px;
   cursor: pointer;
 }
+
 .card-profile-pic {
-  background-color: #4caf50; /* Green */
+  background-color: #4caf50;
+  /* Green */
   border: none;
   color: white;
   padding: 20px;
@@ -78,8 +79,10 @@
   margin: 4px 2px;
   border-radius: 50%;
 }
+
 .card-emoji-icon {
-  background-color: orange; /* Green */
+  background-color: orange;
+  /* Green */
   border: none;
   color: white;
   padding: 20px;
@@ -90,6 +93,7 @@
   margin: 4px 2px;
   border-radius: 50%;
 }
+
 .card-center {
   max-width: 30em;
   width: 100%;
@@ -103,56 +107,36 @@
   width: 100%;
   height: 16em;
 }
+
 .pic-small-container {
   width: 100%;
   // display: flex;
   // flex-wrap: wrap;
 }
 
-.square-pic {
+.square-pix{
+  object-fit: cover;
+}
+
+.brick {
   width: 50%;
 }
 
-.square-pic-small {
-  background-color: #f9e2c4;
-  width: 50%;
-  height: 8em;
+.text{
+  font-size: 9px;
 }
-.square-pic-small-one {
-  background-color: #01aeed;
-  width: 50%;
-  height: 8em;
-}
-.square-pic-small-two {
-  background-color: rgb(179, 144, 32);
-  width: 50%;
-  height: 8em;
-}
-.square-pic-small-three {
-  background-color: rgb(231, 81, 36);
-  width: 50%;
-  height: 8em;
-}
-.square-pic-small-four {
-  background-color: rgb(85, 117, 85);
-  width: 50%;
-  height: 8em;
-}
-.square-pic-small-five {
-  background-color: #008694;
-  width: 50%;
-  height: 8em;
-}
-.square-pic-small-six {
-  background-color: rgb(31, 71, 29);
-  width: 50%;
-  height: 8em;
+
+.button-field{
+  display: flex;
+	width: 330px;
+	justify-content: space-around;
 }
 
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }

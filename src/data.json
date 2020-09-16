@@ -1,30 +1,34 @@
 [{
     "postOwner": "Claas",
     "postContent": [{
-      "type": "image",
-      "value": "https://www.creasedcards.com/img/product/traflagar-square-art-based-london-landmark-card-3010907-600.jpg"
-    }],
+        "type": "image",
+        "value": "https://www.creasedcards.com/img/product/traflagar-square-art-based-london-landmark-card-3010907-600.jpg"
+      },
+      {
+        "type": "text",
+        "value": "London is the coolest city!"
+      }
+    ],
     "comments": [{
       "commenter": "Luke",
       "comment": {
         "type": "text",
-        "value": "Great post"
+        "value": "Great post!"
       }
     }]
   },
   {
     "postOwner": "Alice",
     "postContent": [{
-        "type": "image",
-        "value": "https://c8.alamy.com/comp/2BDAXYP/berlin-city-skyline-silhouette-vector-square-closed-illustration-isolated-on-white-background-worldwide-traveling-concept-german-tourism-and-journey-2BDAXYP.jpg"
-      },
-      {
-        "type": "image",
-        "value": "https://www.creasedcards.com/img/product/traflagar-square-art-based-london-landmark-card-3010907-600.jpg"
-      }
-    ],
+      "type": "image",
+      "value": "https://c8.alamy.com/comp/2BDAXYP/berlin-city-skyline-silhouette-vector-square-closed-illustration-isolated-on-white-background-worldwide-traveling-concept-german-tourism-and-journey-2BDAXYP.jpg"
+    }, 
+    {
+      "type": "text",
+      "value": "This is the best Berlin author!"
+    }],
     "comments": [{
-      "commenter": "Claas",
+      "commenter": "Rico",
       "comment": {
         "type": "text",
         "value": "codebar magic"
