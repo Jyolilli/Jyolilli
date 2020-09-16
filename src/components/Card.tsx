@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import Comments, { CommentsProps } from "./Comments";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 type CardProps = CommentsProps & {
   postOwner: string;
@@ -10,9 +11,12 @@ type CardProps = CommentsProps & {
 };
 
 function Card(props: CardProps) {
+  const [userComments, setUserComments] = useState("");
+
   const handlePost = (e: React.FormEvent<HTMLInputElement>) => {
-    const newValue = e.currentTarget.value;
-    console.log(newValue);
+   console.log(e.currentTarget.value);
+    setUserComments(e.currentTarget.value);
+    console.log(userComments);
   };
 
   //  BEM vs ITCSS
@@ -23,44 +27,37 @@ function Card(props: CardProps) {
       {postContent
         .filter(({ type }) => type === "image")
         .map((pic) => (
-          <div className="square-pic">
-            <img src={pic.value} alt={pic.type} />
+          <div>
+            <img className="square-pix" src={pic.value} alt={pic.type} />
           </div>
         ))}
-      {/* {postContent.type === "image" ? (
-        <div className="square-pic">
-          <img src={postContent.value} alt={postContent.type} />
-        </div>
-      ) : null} */}
-      <div className="square-pic">
+      <div className="square">
         <header>
           <div className="profile-pic"></div>
           <div className="emoji"></div>
-          <h2>{postOwner}</h2>
+          <h6 className="name">{postOwner}</h6>
         </header>
         {postContent
           .filter(({ type }) => type === "text")
           .map((txt) => (
-            <div>
+            <div className="text">
               <p>{txt.value}</p>
             </div>
           ))}
-        {/* {postContent.type === "text" ? (
-          <div>
-            <p>{postContent.value}</p>
-          </div>
-        ) : null} */}
         <footer>
           <header>
-            <button>LikeBtn</button>
-            <button>ChatBtn</button>
+            <FontAwesomeIcon className="heart" icon="heart" />
+            {/* <button className="like-button">Like</button>
+            <button className="chat-button">Chat</button> */}
           </header>
           <div>
             <Comments comments={comments} />
+            {userComments}
 
             <form action="">
-              <input type="text" name="quickpost" onChange={handlePost} />
-              <input type="submit" value="Post" />
+              <input className="submit-comment" type="text" name="quickpost" onChange={handlePost} />
+             {/* <input type="submit" value="Post" /> */}
+              <FontAwesomeIcon className="arrow-right" icon="arrow-alt-circle-right" />
             </form>
           </div>
         </footer>
