@@ -20,10 +20,11 @@ fontawesome nested into input
 function Card(props: CardProps) {
   const [userComments, setUserComments] = useState("");
   const [newComment, setNewComment] = useState("");
+  const [heartIconFilled, setHeartIconFilled] = useState(false);
 
   const handleCommentChange = (e: React.FormEvent<HTMLInputElement>) => {
     setNewComment(e.currentTarget.value);
-    
+
     console.log({ newComment });
   };
 
@@ -33,6 +34,11 @@ function Card(props: CardProps) {
     setUserComments(newComment);
 
     console.log({ userComments });
+  };
+  const handleHeartClick = (e: React.FormEvent<HTMLFormElement>) => {
+    console.log("heart");
+    setHeartIconFilled(true);
+    e.preventDefault();
   };
 
   //  BEM vs ITCSS
@@ -61,18 +67,31 @@ function Card(props: CardProps) {
             </div>
           ))}
         <footer>
-          <header>
-            <FontAwesomeIcon className="heart" icon="heart" />
-            {/* <button className="like-button">Like</button>
-            <button className="chat-button">Chat</button> */}
-          </header>
+          {!heartIconFilled && (
+            <button className="heart" onClick={() => setHeartIconFilled(true)}>
+              <FontAwesomeIcon icon="heart" />
+            </button>
+          )}
+          {heartIconFilled && (
+            <button className="heart-blue" onClick={() => setHeartIconFilled(false)}>
+              <FontAwesomeIcon icon="heart" />
+            </button>
+          )}
           <div>
             <Comments comments={comments} />
             {userComments}
 
             <form onSubmit={handleSubmit}>
-              <input className="submit-comment" value={ newComment } type="text" name="quickpost" onChange={handleCommentChange} />
-              <input type="submit" value="Post" />
+              <input
+                className="submit-comment"
+                value={newComment}
+                type="text"
+                name="quickpost"
+                onChange={handleCommentChange}
+              />
+              <button type="submit" value="Post">
+                <FontAwesomeIcon className="arrow-right" icon="arrow-alt-circle-right" />
+              </button>
               {/* <FontAwesomeIcon className="arrow-right" icon="arrow-alt-circle-right" /> */}
             </form>
           </div>
