@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Comments, { CommentsProps } from "./Comments";
+import Comments, { Comment, CommentsProps } from "./Comments";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 type CardProps = CommentsProps & {
@@ -9,6 +9,8 @@ type CardProps = CommentsProps & {
     value: string;
   }[];
 };
+
+const url = "";
 //TODO
 /*
 userComments - array of objects
@@ -18,8 +20,9 @@ fontawesome nested into input
 */
 
 function Card(props: CardProps) {
-  const [userComments, setUserComments] = useState("");
+  const [userComments, setUserComments] = useState<Comment[]>([]);
   const [newComment, setNewComment] = useState("");
+  const [commenter, setCommenter] = useState("");
   const [heartIconFilled, setHeartIconFilled] = useState(false);
 
   const handleCommentChange = (e: React.FormEvent<HTMLInputElement>) => {
@@ -28,20 +31,25 @@ function Card(props: CardProps) {
     console.log({ newComment });
   };
 
+  const handleCommenterChange = (e: React.FormEvent<HTMLInputElement>) => {
+    setCommenter(e.currentTarget.value);
+
+    console.log({ commenter });
+  };
+  // const sendData = () =>
+  //   fetch(url, {
+  //     method: "POST",
+  //     body: JSON.stringify(userComments),
+  //   });
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     console.log("hi");
     e.preventDefault();
-    setUserComments(newComment);
-
+    setUserComments(userComments.concat({ commenter: commenter, comment: { type: "text", value: newComment } }));
+    // sendData();
     console.log({ userComments });
   };
-  const handleHeartClick = (e: React.FormEvent<HTMLFormElement>) => {
-    console.log("heart");
-    setHeartIconFilled(true);
-    e.preventDefault();
-  };
 
-  //  BEM vs ITCSS
 
   const { postOwner, postContent, comments } = props;
   return (
@@ -49,21 +57,22 @@ function Card(props: CardProps) {
       {postContent
         .filter(({ type }) => type === "image")
         .map((pic) => (
-          <div>
+          <div className="pix-container" key={pic.value}>
             <img className="square-pix" src={pic.value} alt={pic.type} />
           </div>
         ))}
       <div className="square">
         <header>
-          <div className="profile-pic"></div>
           <div className="emoji"></div>
-          <h6 className="name">{postOwner}</h6>
+          <h6 className="post-owner-name">{postOwner}</h6>
         </header>
         {postContent
           .filter(({ type }) => type === "text")
           .map((txt) => (
-            <div className="text">
-              <p>{txt.value}</p>
+            <div key={txt.value} className="post-bg">
+              <div className="post-text">
+                <span>{txt.value}</span>
+              </div>
             </div>
           ))}
         <footer>
@@ -79,19 +88,29 @@ function Card(props: CardProps) {
           )}
           <div>
             <Comments comments={comments} />
-            {userComments}
+            <Comments comments={userComments} />
 
             <form onSubmit={handleSubmit}>
-              <input
-                className="submit-comment"
-                value={newComment}
-                type="text"
-                name="quickpost"
-                onChange={handleCommentChange}
-              />
+              <div>
+                <input
+                  className="submit-comment"
+                  value={commenter}
+                  type="text"
+                  name="quickpost"
+                  onChange={handleCommenterChange}
+                />
+                <input
+                  className="submit-commenter"
+                  value={newComment}
+                  type="text"
+                  name="quickpost"
+                  onChange={handleCommentChange}
+                />
+              </div>
               <button type="submit" value="Post">
-                <FontAwesomeIcon className="arrow-right" icon="arrow-alt-circle-right" />
+                <FontAwesomeIcon className="arrow-right" icon="angle-double-right" />
               </button>
+
               {/* <FontAwesomeIcon className="arrow-right" icon="arrow-alt-circle-right" /> */}
             </form>
           </div>

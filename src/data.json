@@ -6,7 +6,7 @@
       },
       {
         "type": "text",
-        "value": "London is the coolest city!"
+        "value": "London is just the coolest city, got on the tube at King's Cross this morning, so many different cultures, amazing!"
       }
     ],
     "comments": [{
@@ -20,32 +20,38 @@
   {
     "postOwner": "Alice",
     "postContent": [{
-      "type": "image",
-      "value": "https://c8.alamy.com/comp/2BDAXYP/berlin-city-skyline-silhouette-vector-square-closed-illustration-isolated-on-white-background-worldwide-traveling-concept-german-tourism-and-journey-2BDAXYP.jpg"
-    }, 
-    {
-      "type": "text",
-      "value": "This is the best Berlin author!"
-    }],
+        "type": "image",
+        "value": "https://www.creasedcards.com/img/product/traflagar-square-art-based-london-landmark-card-3010907-600.jpg"
+      },
+      {
+        "type": "text",
+        "value": "'Berlin-stories!' British-American writer Christopher Isherwood got famous in the LGBT scene with this Berlin novel."
+      }
+    ],
     "comments": [{
       "commenter": "Rico",
       "comment": {
         "type": "text",
-        "value": "codebar magic"
+        "value": "Yeah, he is so cool and fun to read. An absolute MUST if you live in Berlin for a while."
       }
     }]
   },
   {
     "postOwner": "Jessica",
     "postContent": [{
-      "type": "text",
-      "value": "Awesome codebar"
-    }],
+        "type": "text",
+        "value": "Awesome Freeze - I cannot live without you. Hope we'll meet there next October"
+      },
+      {
+        "type": "image",
+        "value": "https://www.creasedcards.com/img/product/traflagar-square-art-based-london-landmark-card-3010907-600.jpg"
+      }
+    ],
     "comments": [{
       "commenter": "Pillow",
       "comment": {
         "type": "text",
-        "value": "Yeah, isn't it cool!"
+        "value": "Yeah, this is not cool!"
       }
     }]
   }
