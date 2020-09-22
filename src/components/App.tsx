@@ -2,10 +2,10 @@ import React from "react";
 import "../App.scss";
 import Layout from "./Layout";
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faCoffee, faHeart, faTrash, faArrowAltCircleRight } from "@fortawesome/free-solid-svg-icons";
+import { faCoffee, faHeart, faTrash, faAngleDoubleRight } from "@fortawesome/free-solid-svg-icons";
 
 
-library.add(faCoffee, faHeart, faTrash, faArrowAltCircleRight)
+library.add(faCoffee, faHeart, faTrash, faAngleDoubleRight)
 
 function App() {
   return (

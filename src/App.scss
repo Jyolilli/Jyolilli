@@ -44,10 +44,6 @@
 
   &:nth-child(even) {
     flex-direction: row-reverse;
-
-    img {
-      width: 100%;
-    }
   }
 }
 
@@ -93,6 +89,10 @@
   border-radius: 50%;
 }
 
+input {
+  margin-bottom: 3px;
+}
+
 .card-center {
   max-width: 30em;
   width: 100%;
@@ -103,7 +103,6 @@
 /* Layout component */
 .square-pic-large {
   background-color: gold;
-  width: 100%;
   height: 16em;
 }
 
@@ -118,29 +117,61 @@
 }
 
 .square {
-  width: 50%;
+  max-height: 300px;
   padding: 5px;
+  overflow-y: scroll;
 }
 
-.text {
+.post-bg {
+  width: 100%;
+  background-color: #e6e4e4;
+  padding: 2%;
+  border-radius: 4px;
+}
+
+.comment-bg {
+  width: 100%;
+  background-color: #e6e4e4;
+  padding: 2%;
+  border-radius: 4px;
+  margin-bottom: 3px;
+}
+
+.post-text {
   font-size: 9px;
 }
-.name {
-  color: rgb(9, 87, 160);
+
+.comment-text {
+  font-size: 9px;
 }
+
+.post-owner-name {
+  color: rgb(9, 87, 160);
+  margin: 0;
+}
+
+.commenter-name {
+  color: rgb(9, 87, 160);
+  margin: 0;
+}
+
 .heart {
   color: red;
 }
-.heart-blue{
-  color: blue
+
+.heart-blue {
+  color: blue;
 }
-button, submit { 
-  border:none; 
-  background: none; 
-} 
+
+button,
+submit {
+  border: none;
+  background: none;
+}
+
 .submit-comment {
   outline: 0;
-  border-width: 0 0 1px;
+  border-width: 1px;
 }
 
 .button-field {
