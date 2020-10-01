@@ -25,6 +25,8 @@ function Card(props: CardProps) {
   const [newComment, setNewComment] = useState("");
   const [commenter, setCommenter] = useState("");
   const [heartIconFilled, setHeartIconFilled] = useState(false);
+  const [commentIcon, setCommentIcon] = useState(false);
+  const [moreIcon, setMoreIcon] = useState(false);
 
   const handleCommentChange = (e: React.FormEvent<HTMLInputElement>) => {
     setNewComment(e.currentTarget.value);
@@ -70,11 +72,24 @@ function Card(props: CardProps) {
           ))}
         <footer>
           <button
-            className={heartIconFilled ? "heart" : "heart-gray"}
+            className={heartIconFilled ? "heart" : "icon-gray"}
             onClick={() => setHeartIconFilled(!heartIconFilled)}
           >
             <FontAwesomeIcon icon="heart" />
           </button>
+          <button
+            className={commentIcon ? "comment" : "icon-gray"}
+            onClick={() => setCommentIcon(!commentIcon)}
+          >
+            <FontAwesomeIcon icon="comment" />
+          </button>
+          <button
+            className={moreIcon ? "comment" : "icon-gray"}
+            onClick={() => setMoreIcon(!moreIcon)}
+          >
+            <FontAwesomeIcon icon="angle-double-right" />
+          </button>
+         
 
           {/* // with interpolation still readable?
           <button className={`heart${ heartIconFilled ? "" : "-gray"}`} onClick={() => setHeartIconFilled(!heartIconFilled)}>

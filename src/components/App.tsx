@@ -2,11 +2,11 @@ import React from "react";
 import "../App.scss";
 import Layout from "./Layout";
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faCoffee, faHeart, faTrash, faAngleDoubleRight } from "@fortawesome/free-solid-svg-icons";
+import { faCoffee, faHeart, faTrash, faAngleDoubleRight, faComment } from "@fortawesome/free-solid-svg-icons";
 import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
 import Article from "./Article"
 
-library.add(faCoffee, faHeart, faTrash, faAngleDoubleRight);
+library.add(faCoffee, faHeart, faTrash, faAngleDoubleRight, faComment);
 
 function App() {
   return (
