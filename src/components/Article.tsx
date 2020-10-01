@@ -7,9 +7,25 @@ interface ParamTypes {
 }
 
 const Article = () => {
-    const { id } = useParams<ParamTypes>();
-    const post = posts.find(item => item.id === id)
-    return <div>{post.postOwner}</div>;
+  const { id } = useParams<ParamTypes>();
+  const post = posts.find((item) => item.id === id);
+  console.log("post", post);
+  return (
+    <div>
+      <div>{post!.postOwner}</div>
+      <div>
+      {post!.postContent
+          .filter(({ type }) => type === "text")
+          .map((txt) => (
+            <div key={txt.value} className="post-bg">
+              <div className="post-text">
+                <span>{txt.value}</span>
+              </div>
+            </div>
+          ))}
+      </div>
+    </div>
+  );
 };
 
 export default Article;

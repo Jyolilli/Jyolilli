@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 
 type CardProps = CommentsProps & {
   postOwner: string;
+  id: string;
   postContent: {
     type: string;
     value: string;
@@ -40,7 +41,6 @@ function Card(props: CardProps) {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setUserComments(userComments.concat({ commenter: commenter, comment: { type: "text", value: newComment } }));
-    // sendData();
     console.log({ userComments });
   };
 
