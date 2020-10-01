@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Comments, { Comment, CommentsProps } from "./Comments";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
 
 type CardProps = CommentsProps & {
   postOwner: string;
@@ -10,7 +11,6 @@ type CardProps = CommentsProps & {
   }[];
 };
 
-const url = "";
 //TODO
 /*
 userComments - array of objects
@@ -36,29 +36,22 @@ function Card(props: CardProps) {
 
     console.log({ commenter });
   };
-  // const sendData = () =>
-  //   fetch(url, {
-  //     method: "POST",
-  //     body: JSON.stringify(userComments),
-  //   });
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    console.log("hi");
     e.preventDefault();
     setUserComments(userComments.concat({ commenter: commenter, comment: { type: "text", value: newComment } }));
     // sendData();
     console.log({ userComments });
   };
 
-
-  const { postOwner, postContent, comments } = props;
+  const { postOwner, postContent, comments, id } = props;
   return (
     <article className="card">
       {postContent
         .filter(({ type }) => type === "image")
         .map((pic) => (
           <div className="pix-container" key={pic.value}>
-            <img className="square-pix" src={pic.value} alt={pic.type} />
+            <Link to={`/article/${id}`}><img className="square-pix" src={pic.value} alt={pic.type} /></Link>
           </div>
         ))}
       <div className="square">
@@ -76,16 +69,18 @@ function Card(props: CardProps) {
             </div>
           ))}
         <footer>
-          {!heartIconFilled && (
-            <button className="heart" onClick={() => setHeartIconFilled(true)}>
+          <button
+            className={heartIconFilled ? "heart" : "heart-gray"}
+            onClick={() => setHeartIconFilled(!heartIconFilled)}
+          >
+            <FontAwesomeIcon icon="heart" />
+          </button>
+
+          {/* // with interpolation still readable?
+          <button className={`heart${ heartIconFilled ? "" : "-gray"}`} onClick={() => setHeartIconFilled(!heartIconFilled)}>
               <FontAwesomeIcon icon="heart" />
-            </button>
-          )}
-          {heartIconFilled && (
-            <button className="heart-blue" onClick={() => setHeartIconFilled(false)}>
-              <FontAwesomeIcon icon="heart" />
-            </button>
-          )}
+            </button> */}
+
           <div>
             <Comments comments={comments} />
             <Comments comments={userComments} />

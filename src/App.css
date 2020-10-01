@@ -1,5 +1,3 @@
-// https://create-react-app.dev/docs/adding-a-sass-stylesheet/
-
 .App {
   text-align: center;
 }
@@ -8,20 +6,29 @@
   height: 40vmin;
   pointer-events: none;
 }
-
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    -webkit-animation: App-logo-spin infinite 20s linear;
+            animation: App-logo-spin infinite 20s linear;
   }
 }
 
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
 }
@@ -36,15 +43,24 @@
 }
 
 .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+}
 
-  img {
-    width: 100%;
-  }
+.card img {
+  width: 100%;
+}
 
-  &:nth-child(even) {
-    flex-direction: row-reverse;
-  }
+.card:nth-child(even) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.card:nth-child(even) img {
+  width: 100%;
 }
 
 .button {
@@ -89,10 +105,6 @@
   border-radius: 50%;
 }
 
-input {
-  margin-bottom: 3px;
-}
-
 .card-center {
   max-width: 30em;
   width: 100%;
@@ -103,89 +115,69 @@ input {
 /* Layout component */
 .square-pic-large {
   background-color: gold;
+  width: 100%;
   height: 16em;
 }
 
 .pic-small-container {
   width: 100%;
-  // display: flex;
-  // flex-wrap: wrap;
 }
 
 .square-pix {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .square {
-  max-height: 300px;
+  width: 50%;
   padding: 5px;
-  overflow-y: scroll;
 }
 
-.post-bg {
-  width: 100%;
-  background-color: #e6e4e4;
-  padding: 2%;
-  border-radius: 4px;
-}
-
-.comment-bg {
-  width: 100%;
-  background-color: #e6e4e4;
-  padding: 2%;
-  border-radius: 4px;
-  margin-bottom: 3px;
-}
-
-.post-text {
+.text {
   font-size: 9px;
 }
 
-.comment-text {
-  font-size: 9px;
-}
-
-.post-owner-name {
-  color: rgb(9, 87, 160);
-  margin: 0;
-}
-
-.commenter-name {
-  color: rgb(9, 87, 160);
-  margin: 0;
-}
-
-.heart-gray {
-  color: #e6e4e4;
+.name {
+  color: #0957a0;
 }
 
 .heart {
   color: red;
 }
 
-button,
-submit {
-  border: none;
-  background: none;
-}
-
 .submit-comment {
   outline: 0;
-  border-width: 1px;
+  border-width: 0 0 1px;
 }
 
 .button-field {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 330px;
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+@-webkit-keyframes App-logo-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
 @keyframes App-logo-spin {
   from {
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
-
   to {
-    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
+/*# sourceMappingURL=App.css.map */

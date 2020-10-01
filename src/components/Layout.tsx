@@ -9,7 +9,7 @@ const Layout = () => {
     <article className="layout">
       <header className="square-pic-large"></header>
       <main className="pic-small-container">{posts.map((post) => (
-            <Card key={post.postOwner} {...post} />
+            <Card key={post.id} {...post} />
           ))}
       </main>
       <footer></footer>

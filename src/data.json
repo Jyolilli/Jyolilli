@@ -1,5 +1,6 @@
 [{
     "postOwner": "Claas",
+    "id": "0001",
     "postContent": [{
         "type": "image",
         "value": "https://www.creasedcards.com/img/product/traflagar-square-art-based-london-landmark-card-3010907-600.jpg"
@@ -19,6 +20,7 @@
   },
   {
     "postOwner": "Alice",
+    "id": "0002",
     "postContent": [{
         "type": "image",
         "value": "https://www.creasedcards.com/img/product/traflagar-square-art-based-london-landmark-card-3010907-600.jpg"
@@ -38,6 +40,7 @@
   },
   {
     "postOwner": "Jessica",
+    "id": "0003",
     "postContent": [{
         "type": "text",
         "value": "Awesome Freeze - I cannot live without you. Hope we'll meet there next October"
