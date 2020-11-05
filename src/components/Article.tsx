@@ -14,7 +14,7 @@ const Article = () => {
     <div>
       <div>{post!.postOwner}</div>
       <div>
-      {post!.postContent
+        {post!.postContent
           .filter(({ type }) => type === "text")
           .map((txt) => (
             <div key={txt.value} className="post-bg">

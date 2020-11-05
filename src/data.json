@@ -1,7 +1,9 @@
-[{
+[
+  {
     "postOwner": "Claas",
     "id": "0001",
-    "postContent": [{
+    "postContent": [
+      {
         "type": "image",
         "value": "https://www.creasedcards.com/img/product/traflagar-square-art-based-london-landmark-card-3010907-600.jpg"
       },
@@ -10,18 +12,21 @@
         "value": "London is just the coolest city, got on the tube at King's Cross this morning, so many different cultures, amazing!"
       }
     ],
-    "comments": [{
-      "commenter": "Luke",
-      "comment": {
-        "type": "text",
-        "value": "Great post!"
+    "comments": [
+      {
+        "commenter": "Luke",
+        "comment": {
+          "type": "text",
+          "value": "Great post!"
+        }
       }
-    }]
+    ]
   },
   {
     "postOwner": "Alice",
     "id": "0002",
-    "postContent": [{
+    "postContent": [
+      {
         "type": "image",
         "value": "https://www.creasedcards.com/img/product/traflagar-square-art-based-london-landmark-card-3010907-600.jpg"
       },
@@ -30,18 +35,21 @@
         "value": "'Berlin-stories!' British-American writer Christopher Isherwood got famous in the LGBT scene with this Berlin novel."
       }
     ],
-    "comments": [{
-      "commenter": "Rico",
-      "comment": {
-        "type": "text",
-        "value": "Yeah, he is so cool and fun to read. An absolute MUST if you live in Berlin for a while."
+    "comments": [
+      {
+        "commenter": "Rico",
+        "comment": {
+          "type": "text",
+          "value": "Yeah, he is so cool and fun to read. An absolute MUST if you live in Berlin for a while."
+        }
       }
-    }]
+    ]
   },
   {
     "postOwner": "Jessica",
     "id": "0003",
-    "postContent": [{
+    "postContent": [
+      {
         "type": "text",
         "value": "Awesome Freeze - I cannot live without you. Hope we'll meet there next October"
       },
@@ -50,12 +58,14 @@
         "value": "https://www.creasedcards.com/img/product/traflagar-square-art-based-london-landmark-card-3010907-600.jpg"
       }
     ],
-    "comments": [{
-      "commenter": "Pillow",
-      "comment": {
-        "type": "text",
-        "value": "Yeah, this is not cool!"
+    "comments": [
+      {
+        "commenter": "Pillow",
+        "comment": {
+          "type": "text",
+          "value": "Yeah, this is not cool!"
+        }
       }
-    }]
+    ]
   }
 ]

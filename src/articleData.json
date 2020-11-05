@@ -1,0 +1,20 @@
+[
+  {
+    "postOwner": "Lilli",
+    "id": "0001",
+    "postContent": {
+      "headline": "Window localStorage Property",
+      "mainImage": "https://www.creasedcards.com/img/product/traflagar-square-art-based-london-landmark-card-3010907-600.jpg",
+      "bodyText": "The localStorage and sessionStorage properties allow to save key/value pairs in a web browser. The localStorage object stores data with no expiration date. The data will not be deleted when the browser is closed, and will be available the next day, week, or year. The localStorage property is read-only.Tip: Also look at the sessionStorage property which stores data for one session (data is lost when the browser tab is closed)."
+    }
+  },
+  {
+    "postOwner": "Jyoti",
+    "id": "0002",
+    "postContent": {
+      "headline": "Window localStorage Property",
+      "mainImage": "https://www.creasedcards.com/img/product/traflagar-square-art-based-london-landmark-card-3010907-600.jpg",
+      "bodyText": "The localStorage and sessionStorage properties allow to save key/value pairs in a web browser. The localStorage object stores data with no expiration date. The data will not be deleted when the browser is closed, and will be available the next day, week, or year. The localStorage property is read-only.Tip: Also look at the sessionStorage property which stores data for one session (data is lost when the browser tab is closed)."
+    }
+  }
+]
